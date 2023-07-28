@@ -60,17 +60,17 @@ function NavBar() {
               <Link className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 내정보
               </Link>
-              <ul className="dropdown-menu">
-                <li data-bs-dismiss="offcanvas"><Link className="dropdown-item" to="/profile">프로필수정</Link></li>
-                <li data-bs-dismiss="offcanvas"><Link className="dropdown-item" to="/chatroom">채팅방 목록보기</Link></li>
+              <ul className="dropdown-menu" data-bs-dismiss="offcanvas">
+                <li><Link className="dropdown-item" to="/profile">프로필수정</Link></li>
+                <li><Link className="dropdown-item" to="/chatroom">채팅방 목록보기</Link></li>
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
-                <li data-bs-dismiss="offcanvas"><Link className="dropdown-item" to="/myposts">내 게시글</Link></li>
-                <li data-bs-dismiss="offcanvas"><Link className="dropdown-item" to="/interests">관심상품</Link></li>
+                <li><Link className="dropdown-item" to="/myposts">내 게시글</Link></li>
+                <li><Link className="dropdown-item" to="/interests">관심상품</Link></li>
               </ul>
                 <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-                  <li className="nav-item" data-bs-dismiss="offcanvas">
+                  <li className="nav-item">
                     <Link className="nav-link" to="/user/logout">로그아웃</Link>
                   </li></ul>
             </li>}
