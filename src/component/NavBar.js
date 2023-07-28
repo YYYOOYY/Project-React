@@ -38,11 +38,11 @@ function NavBar() {
         <div className="offcanvas-body">
           <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" href="/main">중고매물 보기</Link>
+              <Link className="nav-link active" aria-current="page" to="/main">중고매물 보기</Link>
             </li>
             {jwt &&
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" href="/post/create">중고매물 판매</Link>
+              <Link className="nav-link active" aria-current="page" to="/post/create">중고매물 판매</Link>
             </li>}
 
             {!jwt &&
@@ -57,17 +57,17 @@ function NavBar() {
 
             {jwt &&
             <li className="nav-item dropdown">
-              <Link className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <Link className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 내정보
               </Link>
               <ul className="dropdown-menu">
-                <li><Link className="dropdown-item" href="/profile">프로필수정</Link></li>
-                <li><Link className="dropdown-item" href="/chatroom">채팅방 목록보기</Link></li>
+                <li><Link className="dropdown-item" to="/profile">프로필수정</Link></li>
+                <li><Link className="dropdown-item" to="/chatroom">채팅방 목록보기</Link></li>
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
-                <li><Link className="dropdown-item" href="myposts">내 게시글</Link></li>
-                <li><Link className="dropdown-item" href="/interests">관심상품</Link></li>
+                <li><Link className="dropdown-item" to="/myposts">내 게시글</Link></li>
+                <li><Link className="dropdown-item" to="/interests">관심상품</Link></li>
               </ul>
                 <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                   <li className="nav-item">
