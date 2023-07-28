@@ -37,20 +37,20 @@ function NavBar() {
         </div>
         <div className="offcanvas-body">
           <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li className="nav-item">
+            <li className="nav-item" data-bs-dismiss="offcanvas">
               <Link className="nav-link active" aria-current="page" to="/main">중고매물 보기</Link>
             </li>
             {jwt &&
-            <li className="nav-item">
+            <li className="nav-item" data-bs-dismiss="offcanvas">
               <Link className="nav-link active" aria-current="page" to="/post/create">중고매물 판매</Link>
             </li>}
 
             {!jwt &&
               <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li className="nav-item">
+                <li className="nav-item" data-bs-dismiss="offcanvas">
                   <Link className="nav-link" to="/user/login">로그인</Link>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item" data-bs-dismiss="offcanvas">
                   <Link className="nav-link" to="/user/signup">회원가입</Link>
                 </li></ul>}
 
@@ -61,16 +61,16 @@ function NavBar() {
                 내정보
               </Link>
               <ul className="dropdown-menu">
-                <li><Link className="dropdown-item" to="/profile">프로필수정</Link></li>
-                <li><Link className="dropdown-item" to="/chatroom">채팅방 목록보기</Link></li>
+                <li data-bs-dismiss="offcanvas"><Link className="dropdown-item" to="/profile">프로필수정</Link></li>
+                <li data-bs-dismiss="offcanvas"><Link className="dropdown-item" to="/chatroom">채팅방 목록보기</Link></li>
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
-                <li><Link className="dropdown-item" to="/myposts">내 게시글</Link></li>
-                <li><Link className="dropdown-item" to="/interests">관심상품</Link></li>
+                <li data-bs-dismiss="offcanvas"><Link className="dropdown-item" to="/myposts">내 게시글</Link></li>
+                <li data-bs-dismiss="offcanvas"><Link className="dropdown-item" to="/interests">관심상품</Link></li>
               </ul>
                 <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-                  <li className="nav-item">
+                  <li className="nav-item" data-bs-dismiss="offcanvas">
                     <Link className="nav-link" to="/user/logout">로그아웃</Link>
                   </li></ul>
             </li>}

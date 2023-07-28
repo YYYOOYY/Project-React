@@ -96,7 +96,7 @@ function SignupPage() {
             </div>
             {(verifyStatus === 0 || verifyStatus === 9 || verifyStatus === 8 || verifyStatus === 5) &&
                 <div className="sign-form-group">
-                    <input ref={emailRef} type="email" className="form-control" placeholder="이메일을 입력해주세요" aria-label="email" autocomplete="off"/>
+                    <input ref={emailRef} type="email" className="form-control" placeholder="이메일을 입력해주세요" aria-label="email" autoComplete="off"/>
                     <br />
                     <button type="button" className="sign-button" onClick={sendCodeHandle}>인증코드전송</button>
                     {verifyStatus === 9 &&
@@ -112,7 +112,7 @@ function SignupPage() {
             }
             {(verifyStatus === 1 || verifyStatus === 7) &&
                 <div className="sign-form-group">
-                    <input ref={codeRef} type="text" className="form-control" placeholder="인증코드를 입력해주세요" autocomplete="off"/>
+                    <input ref={codeRef} type="text" className="form-control" placeholder="인증코드를 입력해주세요" autoComplete="off"/>
                     <br />
                     <button type="button" className="sign-button" onClick={verifyCodeHandle}>코드인증</button>
                     {verifyStatus === 7 &&
@@ -124,7 +124,7 @@ function SignupPage() {
                 <div className="sign-form-group">
                     <input ref={idRef} type="text" className="form-control" placeholder="아이디 (영소문자, 숫자 5~12자)"
                         pattern="^[a-z][a-z0-9]{4,11}$"
-                        title="아이디는 5자 이상 12자 이하의 영어 소문자와 숫자 조합이어야 합니다." autocomplete="off"/>
+                        title="아이디는 5자 이상 12자 이하의 영어 소문자와 숫자 조합이어야 합니다." autoComplete="off"/>
                     {verifyStatus === 4 && idRef.current.classList.contains("is-invalid") &&
                         <div class="invalid-feedback" style={{ fontSize: 12 }}>
                             영소문자로 시작하며 숫자포함 5~12자를 입력해주세요.
@@ -133,7 +133,7 @@ function SignupPage() {
 
                     <input ref={passRef} type="password" className="form-control" placeholder="비밀번호 (영어, 숫자, 특문 포함 8자 이상)"
                         pattern="^(?=.*[a-zA-Z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$"
-                        title="비밀번호는 8자 이상의 영어, 숫자, 특수문자 조합이어야 합니다." autocomplete="off"/>
+                        title="비밀번호는 8자 이상의 영어, 숫자, 특수문자 조합이어야 합니다." autoComplete="off"/>
                     {verifyStatus === 4 && passRef.current.classList.contains("is-invalid") &&
                         <div class="invalid-feedback" style={{ fontSize: 12 }}>
                             영어, 숫자, 특수문자 포함 8자 이상을 입력해주세요.
@@ -142,7 +142,7 @@ function SignupPage() {
 
                     <input ref={nickRef} type="text" className="form-control" placeholder="닉네임 (영어, 한글 2~8자)"
                         pattern="^[a-zA-Z가-힣]{2,8}$"
-                        title="닉네임은 2자 이상 8자 이하의 영어와 한글만 가능합니다." autocomplete="off"/>
+                        title="닉네임은 2자 이상 8자 이하의 영어와 한글만 가능합니다." autoComplete="off"/>
                     {verifyStatus === 4 && nickRef.current.classList.contains("is-invalid") &&
                         <div class="invalid-feedback" style={{ fontSize: 12 }}>
                             영어와 한글 2~8자를 입력해주세요.

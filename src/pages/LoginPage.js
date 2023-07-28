@@ -68,11 +68,11 @@ function LoginPage() {
                 <form onSubmit={loginFormHandle} ref={formRef}>
                     <div className="mb-3">
                         <span className="form-label">아이디</span>
-                        <input type="text" className="form-control" name="username" autocomplete="off" />
+                        <input type="text" className="form-control" name="username" autoComplete="off" />
                     </div>
                     <div className="mb-3">
                         <span className="form-label">비밀번호</span>
-                        <input type="password" className="form-control" name="password" autocomplete="off" />
+                        <input type="password" className="form-control" name="password" autoComplete="off" />
                     </div>
                     <div className="mb-3">
                         <button type="submit" className="login-button">로그인</button>
