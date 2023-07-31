@@ -70,7 +70,7 @@ function NavBar() {
                 <li><Link className="dropdown-item" to="/interests">관심상품</Link></li>
               </ul>
                 <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-                  <li className="nav-item">
+                  <li className="nav-item" data-bs-dismiss="offcanvas">
                     <Link className="nav-link" to="/user/logout">로그아웃</Link>
                   </li></ul>
             </li>}
